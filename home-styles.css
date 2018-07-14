@@ -1,0 +1,37 @@
+.navbar{
+	border-radius: 65px;
+	height: 49px;
+	width: 99%;
+	bottom: 0px;
+	position: fixed;
+	background-color: #56F4F4;
+	text-align: center;
+}
+.navbar a:hover{
+background-color: white;
+}
+.info-box{
+	border: 1px solid #FEFEFE;
+	width: 800px;
+    height: 800px;
+  	margin-left: auto;
+  	margin-right: auto; 
+  	padding: 200px;  
+/*	color: #CA4242;
+	opacity: 1;		*/
+}
+.name{
+	color: #CA4242;
+	font-family: 'Acme', sans-serif;
+	font-size: 74px;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: 2px 1px black;
+}
+.skills{
+	color: #98C9D5;
+	font-size: 32px;
+	text-align: center;
+	text-shadow: 2px 1px #AD6FB2;
+}
+
