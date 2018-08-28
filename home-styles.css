@@ -2,9 +2,9 @@
   border-radius: 65px;
   height: 49px;
   width: 99%;
-  bottom: 0px;
+  bottom: 0;
   position: fixed;
-  background-color: #56f4f4;
+  background-color: #f4b593;
   text-align: center;
 }
 .navbar a:hover {
