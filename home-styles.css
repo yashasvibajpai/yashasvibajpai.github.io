@@ -7,6 +7,7 @@
   background-color: #f4b593;
   text-align: center;
 }
+
 .navbar a:hover {
   background-color: white;
 }
@@ -19,7 +20,7 @@
 	opacity: 1;		*/
 }
 .name {
-  color: #ca4242;
+  color: #ca5555;
   font-family: "Acme", sans-serif;
   font-size: 74px;
   font-weight: 700;
