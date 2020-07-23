@@ -148,9 +148,22 @@ a:hover {
 }
 
 .title-a {
-  font-size: 3rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  font-size: 60px;
+  font-weight: 900;
+}
+.title-a:hover{
+  animation: flipH 1s linear;
+}
+
+@keyframes flipH{
+  50%{
+    transform: rotateY(180deg);
+  }
+  to{
+    transform: rotateY(360deg);
+  }
 }
 
 .subtitle-a {
