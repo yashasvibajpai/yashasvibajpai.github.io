@@ -465,29 +465,34 @@ Engineering) currently attending The LNMIIT Jaipur.
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script src = "browser.js"></script>
-  <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  <!-- Adroll -->
+  <script type="text/javascript">
+    adroll_adv_id = "ARHUQ4I4URC5PEKHVWXFX3";
+    adroll_pix_id = "4UA3SEMV6BBPZHIKVOXS4E";
+    adroll_version = "2.0";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCVld_jNT-Sz6X1FXRdC_zBVpsy5ENRqVE",
-    authDomain: "ga4-sample-df759.firebaseapp.com",
-    projectId: "ga4-sample-df759",
-    storageBucket: "ga4-sample-df759.appspot.com",
-    messagingSenderId: "419671479472",
-    appId: "1:419671479472:web:3bd39e75a4f2d73cdbd775",
-    measurementId: "G-HE14BQ8M3E"
-  };
+    (function(w, d, e, o, a) {
+        w.__adroll_loaded = true;
+        w.adroll = w.adroll || [];
+        w.adroll.f = [ 'setProperties', 'identify', 'track' ];
+        var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id
+                + "/roundtrip.js";
+        for (a = 0; a < w.adroll.f.length; a++) {
+            w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {
+                return function() {
+                    w.adroll.push([ n, arguments ])
+                }
+            })(w.adroll.f[a])
+        }
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+        e = d.createElement('script');
+        o = d.getElementsByTagName('script')[0];
+        e.async = 1;
+        e.src = roundtripUrl;
+        o.parentNode.insertBefore(e, o);
+    })(window, document);
+    adroll.track("pageView");
+  </script>
 
 </body>
 </html>
