@@ -24,7 +24,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
   
-  <script type="text/javascript">
+<!--   <script type="text/javascript">
     adroll_adv_id = "QD6YHCDFUNCTVMM656KQBK";
     adroll_pix_id = "JJBURLEZKFHLPMAMB7L5W6";
     adroll_version = "2.0";
@@ -49,7 +49,65 @@
         e.src = roundtripUrl;
         o.parentNode.insertBefore(e, o);
     })(window, document);
-</script>
+</script> -->
+<!-- RS Loading Script  -->
+    <script>
+        rudderanalytics = window.rudderanalytics = [];
+
+        var methods = [
+            "load",
+            "page",
+            "track",
+            "identify",
+            "alias",
+            "group",
+            "ready",
+            "reset",
+            "getAnonymousId",
+            "setAnonymousId",
+        ];
+
+        for (var i = 0; i < methods.length; i++) {
+            var method = methods[i];
+            rudderanalytics[method] = (function (methodName) {
+                return function () {
+                    rudderanalytics.push(
+                        [methodName].concat(Array.prototype.slice.call(arguments))
+                    );
+                };
+            })(method);
+        }
+
+        // Example 1
+        // rudderanalytics.load(YOUR_WRITE_KEY, DATA_PLANE_URL);
+
+        // Example 2
+        // In Self-hosted Control Plane the load call will be the following:
+        // rudderanalytics.load(WRITE_KEY, DATA_PLANE_URL, {configUrl: CONTROL_PLANE_URL});
+
+        // 1. Testing in .prod
+        // rudderanalytics.load(
+        //   "1uZNY4FOZnaKfMDqnqRbJpsoUOk",
+        //   "http://localhost:8080",
+        //   { configUrl: "https://api.rudderlabs.com", logLevel: "DEBUG" }
+        // );
+
+        // 2. Testing in .dev
+        rudderanalytics.load(
+            "24vNL0UvJzR4UpBuoyzNpGKBXpr",
+            "http://localhost:8080",
+            { configUrl: "https://api.dev.rudderlabs.com", logLevel: "DEBUG" }
+        );
+
+        // 3. Testing Locally
+        // rudderanalytics.load(
+        //     "286Xi11DK6LK83899r2kS9NNiDZ",
+        //     "http://localhost:8080",
+        //     { configUrl: "http://localhost:5000", logLevel: "DEBUG" }
+        // );
+
+    </script>  
+
 <!--  <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="2LjfBGaU75uvofVREYCpy0lGzFUIaMme";;analytics.SNIPPET_VERSION="4.15.3";
   analytics.load("2LjfBGaU75uvofVREYCpy0lGzFUIaMme");
