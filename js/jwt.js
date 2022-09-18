@@ -4,7 +4,7 @@ import {
  getInAppMessages,
  updateUser,
  track
-} from "../node_modules/@iterable/web-sdk/index.node.js";
+} from '@iterable/web-sdk';
 const { generateJWTToken } = require("./jwtfunc")
 
 (() => {
