@@ -5,7 +5,7 @@
 //  updateUser,
 //  track
 // } from '@iterable/web-sdk';
-const { generateJWTToken } = require("./jwtfunc")
+import { generateJWTToken } from './jwtfunc'
 
 (() => {
  const yourAsyncJWTGeneratorMethod = (header, data, secret) => {
