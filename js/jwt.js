@@ -1,5 +1,4 @@
 // Import the axios HTTP library and the SDK methods you'll be calling
-import axios from 'axios';
 import {
  initialize,
  getInAppMessages,
@@ -18,7 +17,7 @@ const { generateJWTToken } = require("./jwtfunc")
  };
  // If you use userId instead of email, import setUserId instead
  const { setEmail, logout } = initialize(
- process.env.API_KEY || ''
+ process.env.API_KEY || 'b4a24ee2d98c4dd3ba400a812cd3b8b7'
 ,
  yourAsyncJWTGeneratorMethod
  );
