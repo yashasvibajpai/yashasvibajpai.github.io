@@ -4,7 +4,7 @@ import {
  getInAppMessages,
  updateUser,
  track
-} from "../node_modules/@iterable/web-sdk/dist/index";
+} from "../node_modules/@iterable/web-sdk/index";
 const { generateJWTToken } = require("./jwtfunc")
 
 (() => {
@@ -39,7 +39,7 @@ const { generateJWTToken } = require("./jwtfunc")
  );
  // Set the email address, and make the request to get the in-app messages
  // that are available for that user.
- setEmail('docs@iterable.com').then(() => {
+ setEmail('yashasvi@rudderstack.com').then(() => {
  request();
  });
 })();
