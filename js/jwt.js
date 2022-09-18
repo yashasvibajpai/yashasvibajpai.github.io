@@ -4,7 +4,7 @@ import {
  getInAppMessages,
  updateUser,
  track
-} from "../node_modules/@iterable/web-sdk/index";
+} from "../node_modules/@iterable/web-sdk/index.node.js";
 const { generateJWTToken } = require("./jwtfunc")
 
 (() => {
@@ -16,10 +16,19 @@ const { generateJWTToken } = require("./jwtfunc")
   
  };
  // If you use userId instead of email, import setUserId instead
+ const header = {
+  alg: "HS256",
+  typ: "JWT"
+};
+ const data = {
+  email : "yashasvi@rudderstack.com"
+};
+ const secret = d558ce56d2a96906faf9f2ef9562a03e59e2415a9f751317551100a44cab09421b6ae4645c6b9e07e7c12cb5b90883b3ea5ed724df8332d8be94bf92bf34b044;
+
  const { setEmail, logout } = initialize(
  process.env.API_KEY || 'b4a24ee2d98c4dd3ba400a812cd3b8b7'
 ,
- yourAsyncJWTGeneratorMethod
+ yourAsyncJWTGeneratorMethod(header, data, secret)
  );
  const { request, pauseMessageStream, resumeMessageStream } = getInAppMessages(
  {

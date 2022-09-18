@@ -22,15 +22,7 @@ function base64url(source) {
  * 2. A free set of claims.
  * 3. A signature to ensure data integrity.
  * */
- const header = {
-    alg: "HS256",
-    typ: "JWT"
-  };
-  const data = {
-    email : "yashasvi@rudderstack.com"
-  };
-  const secret = d558ce56d2a96906faf9f2ef9562a03e59e2415a9f751317551100a44cab09421b6ae4645c6b9e07e7c12cb5b90883b3ea5ed724df8332d8be94bf92bf34b044;
-
+ 
 function generateJWTToken(header, data, secret) {
   const stringifiedHeader = CryptoJS.enc.Utf8.parse(JSON.stringify(header));
   const encodedHeader = base64url(stringifiedHeader);
