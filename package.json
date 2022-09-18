@@ -1,0 +1,26 @@
+{
+  "name": "yashasvibajpai.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashasvibajpai/yashasvibajpai.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashasvibajpai/yashasvibajpai.github.io/issues"
+  },
+  "homepage": "https://github.com/yashasvibajpai/yashasvibajpai.github.io#readme",
+  "dependencies": {
+    "@iterable/web-sdk": "^0.4.1",
+    "crypto-js": "^4.1.1"
+  }
+}
