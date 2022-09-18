@@ -1,10 +1,10 @@
 // Import the axios HTTP library and the SDK methods you'll be calling
-import {
- initialize,
- getInAppMessages,
- updateUser,
- track
-} from '@iterable/web-sdk';
+// import {
+//  initialize,
+//  getInAppMessages,
+//  updateUser,
+//  track
+// } from '@iterable/web-sdk';
 const { generateJWTToken } = require("./jwtfunc")
 
 (() => {
