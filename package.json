@@ -21,6 +21,7 @@
   "homepage": "https://github.com/yashasvibajpai/yashasvibajpai.github.io#readme",
   "dependencies": {
     "@iterable/web-sdk": "^0.4.1",
-    "crypto-js": "^4.1.1"
+    "crypto-js": "^4.1.1",
+    "requirejs": "^2.3.6"
   }
 }
