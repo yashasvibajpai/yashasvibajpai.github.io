@@ -33,4 +33,4 @@ function generateJWTToken(header, data, secret) {
   const signature = base64url(CryptoJS.enc.HmacSHA256(token, secret));
   return `${token}.${signature}`;
 }
-exports.generateJWTToken = generateJWTToken;
+export default generateJWTToken;
