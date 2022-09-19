@@ -1,5 +1,5 @@
 // import from "";
-const CryptoJS = require("crypto-js");
+import CryptoJS from "crypto-js";
 
 function base64url(source) {
   // Encode in classical base64
